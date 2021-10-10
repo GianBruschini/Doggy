@@ -6,7 +6,7 @@ import com.gian.doggy.data.model.BreedResponse
 class GetAllBreedsInteractor {
     private val respository = BreedRepository()
 
-    suspend operator fun invoke():BreedResponse{
-        return respository.getAllBreeds()
+    suspend operator fun invoke(breedType:String):BreedResponse{
+        return respository.getBreedsByType(breedType)
     }
 }

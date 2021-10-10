@@ -3,15 +3,12 @@ package com.gian.doggy.ui.adapters
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.gian.doggy.data.model.BreedResponse
 import com.gian.doggy.databinding.DogItemBinding
-import com.gian.doggy.ui.view.HomeActivity
 import com.squareup.picasso.Picasso
 
-class AllBreedsAdapter(var context:HomeActivity):
+class AllBreedsAdapter(var listOfDogs: MutableList<String>):
     RecyclerView.Adapter<AllBreedsAdapter.MyViewHolder>() {
 
-    var listOfDogs = ArrayList<String>()
 
     private var mListener: OnItemClickListener? = null
 
